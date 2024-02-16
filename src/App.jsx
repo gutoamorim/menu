@@ -1,3 +1,7 @@
 export default function App() {
-  return <div></div>;
+  return (
+    <div>
+      <h1>Menu online</h1>
+    </div>
+  );
 }
