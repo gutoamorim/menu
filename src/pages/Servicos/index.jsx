@@ -9,7 +9,7 @@ import style from "./servicos.module.css";
 
 export default function Servicos() {
   return (
-    <section className={style.servicos}>
+    <section className={style.servicos} id="servicos">
       <div className="container mx-auto py-40">
         <Title title="Serviços" subtitle="Como são nossos serviços?" />
         <div className="mx-auto grid grid-cols-3 items-center justify-center py-20">

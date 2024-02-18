@@ -1,15 +1,6 @@
-import Header from "./components/Header";
-import Banner from "./pages/Banner";
-import Cardapio from "./pages/Cardapio";
-import Servicos from "./pages/Servicos";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes";
 
 export default function App() {
-  return (
-    <>
-      <Header />
-      <Banner />
-      <Servicos />
-      <Cardapio />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
