@@ -3,7 +3,7 @@ import { FiFacebook } from "react-icons/fi";
 import { FiInstagram } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
-import burguer from "../assets/burguer.png";
+import burguer from "../../assets/burguer.png";
 
 export default function Banner() {
   return (
