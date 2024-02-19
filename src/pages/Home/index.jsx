@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Banner from "../Banner";
 import Depoimentos from "../Depoimentos";
@@ -10,6 +11,7 @@ export default function Home() {
       <Banner />
       <Servicos />
       <Depoimentos />
+      <Footer />
     </>
   );
 }

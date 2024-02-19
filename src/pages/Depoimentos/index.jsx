@@ -1,4 +1,3 @@
-import Title from "../../components/Title";
 import pizzas from "../../assets/pizzas.png";
 import CardDepo from "../../components/CardDepo";
 
@@ -7,7 +6,7 @@ import style from "./depoimentos.module.css";
 export default function Depoimentos() {
   return (
     <section id="depoimentos" className={style.depoimntos}>
-      <div className="container mx-auto">
+      <div className="container mx-auto mb-10 pb-20">
         <div className="grid grid-cols-12 gap-12">
           <div className="col-span-5">
             <div>

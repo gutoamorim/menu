@@ -4,10 +4,11 @@ import { FiInstagram } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
 import burguer from "../../assets/burguer.png";
+import CardSocial from "../../components/CardSocial";
 
 export default function Banner() {
   return (
-    <section className="container mx-auto grid grid-cols-2 pt-28">
+    <section className="container mx-auto grid grid-cols-2 pt-20">
       <div>
         <h1 className="text-6xl font-bold">
           Escolha sua comida <span className="text-yellow-400">favorita.</span>
@@ -34,15 +35,15 @@ export default function Banner() {
           </a>
         </div>
         <div className="flex gap-4 mt-8">
-          <a href="" className="bg-white p-2 rounded shadow-lg">
+          <CardSocial>
             <FiFacebook size={20} />
-          </a>
-          <a href="" className="bg-white p-2 rounded shadow-lg">
+          </CardSocial>
+          <CardSocial>
             <FiInstagram size={20} />
-          </a>
-          <a href="" className="bg-white p-2 rounded shadow-lg">
+          </CardSocial>
+          <CardSocial>
             <FaWhatsapp size={20} />
-          </a>
+          </CardSocial>
         </div>
       </div>
       <div>

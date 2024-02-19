@@ -1,5 +1,6 @@
 .depoimntos {
   background-image: url("../../assets/bg-icons-1.png");
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
