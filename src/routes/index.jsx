@@ -8,6 +8,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
   },
+  {
+    path: "/cardapio",
+    element: <Cardapio />,
+  },
 ]);
 
 export default router;
