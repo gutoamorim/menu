@@ -1,7 +1,7 @@
 import { FiFacebook, FiInstagram } from "react-icons/fi";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import { FaWhatsapp } from "react-icons/fa";
-import CardSocial from "./CardSocial";
+import CardSocial from "../CardSocial";
 
 export default function Footer() {
   return (

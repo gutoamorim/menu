@@ -1,5 +1,5 @@
 import Title from "../../components/Title";
-import Card from "../../components/Card";
+import Card from "../../components/CardServico";
 
 import pedido from "../../assets/icone-pedido.svg";
 import delivery from "../../assets/icone-delivery.svg";

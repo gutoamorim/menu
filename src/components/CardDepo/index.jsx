@@ -3,7 +3,7 @@ import { FaStarHalfAlt } from "react-icons/fa";
 import { FaQuoteLeft } from "react-icons/fa";
 import { FaQuoteRight } from "react-icons/fa";
 
-import dylan from "../assets/dylan.jpg";
+import dylan from "../../assets/dylan.jpg";
 
 export default function CardDepo() {
   return (

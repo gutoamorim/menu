@@ -1,0 +1,15 @@
+.addCart {
+  display: none;
+}
+
+.cardMenu:hover h1 {
+  display: none;
+}
+
+.cardMenu:hover .addCart {
+  display: flex;
+}
+
+.cardMenu:hover .price {
+  color: black;
+}

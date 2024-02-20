@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import Cardapio from "../pages/Cardapio";
 import Home from "../pages/Home";
+import Cardapio from "../pages/Cardapio";
+import Burguers from "../components/Burguers";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,12 @@ const router = createBrowserRouter([
   {
     path: "/cardapio",
     element: <Cardapio />,
+    children: [
+      {
+        path: "burguers",
+        element: <Burguers />,
+      },
+    ],
   },
 ]);
 

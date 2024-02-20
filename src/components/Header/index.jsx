@@ -1,4 +1,4 @@
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import { FiShoppingCart } from "react-icons/fi";
 
 export default function App() {
