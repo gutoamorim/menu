@@ -1,3 +1,4 @@
+import Cart from "../../components/Cart";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Banner from "../Banner";
@@ -7,11 +8,14 @@ import Servicos from "../Servicos";
 export default function Home() {
   return (
     <>
-      <Header />
-      <Banner />
-      <Servicos />
-      <Depoimentos />
-      <Footer />
+      <div className="space-y-20">
+        <Header />
+        <Banner />
+        <Servicos />
+        <Depoimentos />
+        <Footer />
+      </div>
+      <Cart />
     </>
   );
 }

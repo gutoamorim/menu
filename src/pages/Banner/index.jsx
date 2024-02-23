@@ -8,7 +8,7 @@ import CardSocial from "../../components/CardSocial";
 
 export default function Banner() {
   return (
-    <section className="container mx-auto grid grid-cols-2 pt-20">
+    <section className="container mx-auto grid grid-cols-2">
       <div>
         <h1 className="text-6xl font-bold">
           Escolha sua comida <span className="text-yellow-400">favorita.</span>

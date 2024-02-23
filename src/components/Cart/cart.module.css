@@ -1,0 +1,30 @@
+.etapa::before {
+  content: "";
+  width: 20px;
+  background-color: black;
+  position: absolute;
+  height: 2px;
+  margin-left: 55px;
+}
+
+.etapa:last-child::before {
+  content: none;
+}
+
+.etapa.active,
+.etapa.active::before {
+  background-color: #facc15;
+}
+
+.mBody::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+.mBody::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+.mBody::-webkit-scrollbar-track {
+  background: white;
+}
