@@ -1,4 +1,3 @@
-import Cart from "../../components/Cart";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Banner from "../Banner";
@@ -15,7 +14,6 @@ export default function Home() {
         <Depoimentos />
         <Footer />
       </div>
-      <Cart />
     </>
   );
 }

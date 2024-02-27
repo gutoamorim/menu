@@ -1,22 +1,34 @@
 import styles from "./cart.module.css";
 
-import burguer from "../../assets/burguers/burger-1.jpg";
-
-import {
-  FaMinus,
-  FaPlus,
-  FaPlusCircle,
-  FaShoppingCart,
-  FaRegTrashAlt,
-  FaMotorcycle,
-} from "react-icons/fa";
+import { FaMotorcycle } from "react-icons/fa";
+import Items from "./Items";
+import Entrega from "./Entrega";
+import Resumo from "./Resumo";
+import { useContext, useState } from "react";
+import { CartContext } from "../../contexts/CartContext";
 
 export default function Cart() {
+  const [stage, setStage] = useState(1);
+
+  const { toggleCart } = useContext(CartContext);
+
+  function handleStage(e) {
+    if (e.target.id === "next") {
+      if (stage < 3) {
+        setStage((stage) => stage + 1);
+      }
+    } else if (e.target.id === "previous") {
+      if (stage > 1) {
+        setStage((stage) => stage - 1);
+      }
+    }
+  }
+
   return (
     <div
-      className={`fixed top-0 right-0 bottom-0 left-0 bg-white py-8 z-50 overflow-x-hidden overflow-y-auto flex flex-col ${styles.mOverflow}`}
+      className={`fixed top-0 right-0 bottom-0 left-0 bg-white z-50 overflow-x-hidden flex flex-col`}
     >
-      <div className="container mx-auto flex flex-col max-h-full">
+      <div className="container mx-auto pt-4 flex flex-col h-full space-y-4">
         <div className="flex items-center justify-between">
           <div className="space-y-5">
             <div className="flex">
@@ -40,123 +52,21 @@ export default function Cart() {
             <h1 className="text-xl font-bold">Seu carrinho:</h1>
           </div>
 
-          <a className="float-right font-semibold px-4 py-1 rounded-lg shadow-lg cursor-pointer">
+          <a
+            className="float-right font-semibold px-4 py-1 rounded-lg shadow-lg cursor-pointer"
+            onClick={toggleCart}
+          >
             Fechar
           </a>
         </div>
 
-        <div
-          className={`flex-1 overflow-auto overflow-x-hidden ${styles.mBody}`}
-        >
-          <div>
-            <div className="flex items-center justify-center gap-6 py-5 border-b border-zinc-300 last:border-none">
-              <div>
-                <img className="w-24 rounded-xl" src={burguer} alt="" />
-              </div>
-              <div className="flex-1">
-                <p className="text-xl font-bold">Nome do produto</p>
-                <p className="text-yellow-500 text-2xl font-bold">R$ 39,90</p>
-              </div>
-              <div className="flex items-center justify-center h-8 gap-4">
-                <div className="flex">
-                  <span className="border border-black rounded-l-lg flex items-center py-1 px-2 cursor-pointer">
-                    <FaMinus />
-                  </span>
-                  <span className="font-bold border border-black flex items-center py-1 px-2">
-                    1
-                  </span>
-                  <span className="border border-black rounded-r-lg flex items-center py-1 px-2 cursor-pointer">
-                    <FaPlusCircle />
-                  </span>
-                </div>
-                <span className="flex items-center justify-center p-2 bg-red-500 rounded-lg cursor-pointer">
-                  <FaRegTrashAlt size={20} className="inline text-white" />
-                </span>
-              </div>
-            </div>
-            <div className="flex items-center justify-center gap-6 py-5 border-b border-zinc-300 last:border-none">
-              <div>
-                <img className="w-24 rounded-xl" src={burguer} alt="" />
-              </div>
-              <div className="flex-1">
-                <p className="text-xl font-bold">Nome do produto</p>
-                <p className="text-yellow-500 text-2xl font-bold">R$ 39,90</p>
-              </div>
-              <div className="flex items-center justify-center h-8 gap-4">
-                <div className="flex">
-                  <span className="border border-black rounded-l-lg flex items-center py-1 px-2 cursor-pointer">
-                    <FaMinus />
-                  </span>
-                  <span className="font-bold border border-black flex items-center py-1 px-2">
-                    1
-                  </span>
-                  <span className="border border-black rounded-r-lg flex items-center py-1 px-2 cursor-pointer">
-                    <FaPlusCircle />
-                  </span>
-                </div>
-                <span className="flex items-center justify-center p-2 bg-red-500 rounded-lg cursor-pointer">
-                  <FaRegTrashAlt size={20} className="inline text-white" />
-                </span>
-              </div>
-            </div>
-            <div className="flex items-center justify-center gap-6 py-5 border-b border-zinc-300 last:border-none">
-              <div>
-                <img className="w-24 rounded-xl" src={burguer} alt="" />
-              </div>
-              <div className="flex-1">
-                <p className="text-xl font-bold">Nome do produto</p>
-                <p className="text-yellow-500 text-2xl font-bold">R$ 39,90</p>
-              </div>
-              <div className="flex items-center justify-center h-8 gap-4">
-                <div className="flex">
-                  <span className="border border-black rounded-l-lg flex items-center py-1 px-2 cursor-pointer">
-                    <FaMinus />
-                  </span>
-                  <span className="font-bold border border-black flex items-center py-1 px-2">
-                    1
-                  </span>
-                  <span className="border border-black rounded-r-lg flex items-center py-1 px-2 cursor-pointer">
-                    <FaPlusCircle />
-                  </span>
-                </div>
-                <span className="flex items-center justify-center p-2 bg-red-500 rounded-lg cursor-pointer">
-                  <FaRegTrashAlt size={20} className="inline text-white" />
-                </span>
-              </div>
-            </div>
-            <div className="flex items-center justify-center gap-6 py-5 border-b border-zinc-300 last:border-none">
-              <div>
-                <img className="w-24 rounded-xl" src={burguer} alt="" />
-              </div>
-              <div className="flex-1">
-                <p className="text-xl font-bold">Nome do produto</p>
-                <p className="text-yellow-500 text-2xl font-bold">R$ 39,90</p>
-              </div>
-              <div className="flex items-center justify-center h-8 gap-4">
-                <div className="flex">
-                  <span className="border border-black rounded-l-lg flex items-center py-1 px-2 cursor-pointer">
-                    <FaMinus />
-                  </span>
-                  <span className="font-bold border border-black flex items-center py-1 px-2">
-                    1
-                  </span>
-                  <span className="border border-black rounded-r-lg flex items-center py-1 px-2 cursor-pointer">
-                    <FaPlusCircle />
-                  </span>
-                </div>
-                <span className="flex items-center justify-center p-2 bg-red-500 rounded-lg cursor-pointer">
-                  <FaRegTrashAlt size={20} className="inline text-white" />
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="hidden"></div>
-
-          <div className="hidden"></div>
+        <div className={`flex-1 overflow-auto overflow-x-hidden`}>
+          {(stage === 1 && <Items />) ||
+            (stage === 2 && <Entrega />) ||
+            (stage === 3 && <Resumo />)}
         </div>
 
-        <div className="border-t border-zinc-300 text-right py-5 space-y-1">
+        <div className="border-t border-zinc-300 text-right py-5 space-y-5">
           <div>
             <p className="space-x-1">
               <span>Subtotal:</span>
@@ -174,10 +84,24 @@ export default function Cart() {
               <span className="text-yellow-400 text-2xl">R$ 100,00</span>
             </p>
           </div>
-          <a className="mr-3 hidden">Voltar</a>
-          <a className="bg-yellow-400 inline-block py-2 px-4 rounded-lg cursor-pointer">
-            Continuar
-          </a>
+          <div className="flex items-center gap-5 float-right">
+            {stage > 1 && (
+              <a
+                className="mr-3 cursor-pointer font-semibold"
+                id="previous"
+                onClick={handleStage}
+              >
+                Voltar
+              </a>
+            )}
+            <a
+              className="bg-yellow-400 inline-block py-2 px-4 rounded-lg cursor-pointer font-bold"
+              id="next"
+              onClick={handleStage}
+            >
+              Continuar
+            </a>
+          </div>
         </div>
       </div>
     </div>

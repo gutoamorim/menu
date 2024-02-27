@@ -3,8 +3,12 @@ import { FaMinus } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 
 import styles from "./cardmenu.module.css";
+import { useContext } from "react";
+import { CartContext } from "../../contexts/CartContext";
 
 export default function CardMenu({ img, name, price, description }) {
+  const { toggleCart } = useContext(CartContext);
+
   return (
     <div
       className={`max-w-60 h-80 bg-white rounded-lg shadow-lg pb-4 hover:bg-yellow-300 transition ${styles.cardMenu}`}
@@ -32,7 +36,10 @@ export default function CardMenu({ img, name, price, description }) {
               <FaPlus />
             </span>
           </div>
-          <span className="flex items-center justify-center p-2 bg-black rounded-lg cursor-pointer">
+          <span
+            className="flex items-center justify-center p-2 bg-black rounded-lg cursor-pointer"
+            onClick={toggleCart}
+          >
             <FaShoppingCart size={20} className="inline text-white" />
           </span>
         </div>

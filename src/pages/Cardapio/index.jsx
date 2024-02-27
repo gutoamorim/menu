@@ -1,7 +1,6 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Header from "../../components/Header";
 import Title from "../../components/Title";
-import CardMenu from "../../components/CardMenu";
 
 import { FaHamburger } from "react-icons/fa";
 import { FaPizzaSlice } from "react-icons/fa";
@@ -12,8 +11,14 @@ import OptionMenu from "../../components/OptionMenu";
 import Footer from "../../components/Footer";
 
 import styles from "./cardapio.module.css";
+import Cart from "../../components/Cart";
+import { useContext } from "react";
+import { CartContext } from "../../contexts/CartContext";
 
 export default function Cardapio() {
+  const { cart } = useContext(CartContext);
+  console.log(cart);
+
   return (
     <>
       <Header />
@@ -43,6 +48,7 @@ export default function Cardapio() {
         </main>
       </div>
       <Footer />
+      {cart && <Cart />}
     </>
   );
 }
